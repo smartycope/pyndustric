@@ -10,6 +10,9 @@ class Link:
 class Content:
     """A fundemental resource identifier"""
 
+class BuildingType:
+    """ The general type of building. Not a string, use `Env.type` to compare """
+
 class Env:
     """
     Access to special environmental variables.
@@ -379,7 +382,7 @@ class Senseable(ABC):
     def team(self) -> int:
         """The team identifier to which the link belongs."""
     @property
-    def type(self) -> int:
+    def type(self) -> BuildingType:
         """The type of the link."""
     @property
     def flag(self) -> int:
